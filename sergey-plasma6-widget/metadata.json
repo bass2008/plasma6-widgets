@@ -1,0 +1,20 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "Zendor20080@mail.com",
+                "Name": "Sergey"
+            }
+        ],
+        "Category": "Utilities",
+        "Description": "A widget where you can add custom icons and bind arbitrary shell commands to each icon",
+        "Icon": "amarok",
+        "Id": "sergey-plasma6-widget",
+        "License": "GPL",
+        "Name": "Sergey Icon Switcher",
+        "Version": "1.0.0",
+        "Website": "https://github.com/bass2008/plasma6-widgets"
+    },
+    "KPackageStructure": "Plasma/Applet",
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <title>Switch off</title>
+  <g opacity="0.7">
+    <rect x="6" y="14" width="36" height="20" rx="3" fill="none" stroke="#7f8c8d" stroke-width="2.5"/>
+    <rect x="9" y="17" width="14" height="14" rx="1.5" fill="#7f8c8d"/>
+  </g>
+</svg>

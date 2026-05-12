@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name=""/>
+
+  <group name="General">
+    <entry name="iconA" type="String">
+      <label>Icon A</label>
+      <default>semi-starred-symbolic</default>
+    </entry>
+    <entry name="iconB" type="String">
+      <label>Icon B</label>
+      <default>semi-starred-symbolic-rtl</default>
+    </entry>
+    <entry name="checked" type="bool">
+      <default>false</default>
+    </entry>
+    <entry name="useExtraCommand_iconA" type="bool">
+      <default>false</default>
+    </entry>
+    <entry name="useExtraCommand_iconB" type="bool">
+      <default>false</default>
+    </entry>
+    <entry name="textField_iconA" type="String">
+      <default></default>
+    </entry>
+    <entry name="textField_iconB" type="String">
+      <default></default>
+    </entry>
+    <entry name="enableAutoSwitch" type="bool">
+      <label>Enable automatic switching</label>
+      <default>false</default>
+    </entry>
+    <entry name="dayStartTime" type="String">
+      <label>Day start time</label>
+      <default>06:00</default>
+    </entry>
+    <entry name="nightStartTime" type="String">
+      <label>Night start time</label>
+      <default>18:00</default>
+    </entry>
+  </group>
+</kcfg>
