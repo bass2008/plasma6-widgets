@@ -58,11 +58,31 @@ Button {
         width: Kirigami.Units.iconSizes.large + fixedMargins.left + fixedMargins.right
         height: Kirigami.Units.iconSizes.large + fixedMargins.top + fixedMargins.bottom
 
-        Kirigami.Icon {
+        Item {
+            id: previewIcon
             anchors.centerIn: parent
             width: Kirigami.Units.iconSizes.large
             height: width
-            source: iconOrDefault(currentIconName)
+
+            readonly property string iconValue: iconOrDefault(currentIconName)
+            readonly property bool isFilePath: iconValue && (iconValue.startsWith("./") || iconValue.startsWith("../") || iconValue.startsWith("/") || iconValue.startsWith("file:"))
+
+            Image {
+                anchors.fill: parent
+                source: previewIcon.isFilePath ? Qt.resolvedUrl(previewIcon.iconValue) : ""
+                visible: previewIcon.isFilePath
+                fillMode: Image.PreserveAspectFit
+                sourceSize.width: width
+                sourceSize.height: height
+                smooth: true
+                asynchronous: true
+            }
+
+            Kirigami.Icon {
+                anchors.fill: parent
+                source: previewIcon.isFilePath ? "" : previewIcon.iconValue
+                visible: !previewIcon.isFilePath
+            }
         }
     }
 

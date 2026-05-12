@@ -78,11 +78,29 @@ PlasmoidItem {
         }
     }
 
-    Kirigami.Icon {
-
-        id: icon
+    Item {
+        id: iconContainer
         anchors.fill: parent
-        source: plasmoid.configuration.checked ? plasmoid.configuration.iconA : plasmoid.configuration.iconB
+
+        readonly property string iconValue: plasmoid.configuration.checked ? plasmoid.configuration.iconA : plasmoid.configuration.iconB
+        readonly property bool isFilePath: iconValue && (iconValue.startsWith("./") || iconValue.startsWith("../") || iconValue.startsWith("/") || iconValue.startsWith("file:"))
+
+        Image {
+            anchors.fill: parent
+            source: iconContainer.isFilePath ? Qt.resolvedUrl(iconContainer.iconValue) : ""
+            visible: iconContainer.isFilePath
+            fillMode: Image.PreserveAspectFit
+            sourceSize.width: width
+            sourceSize.height: height
+            smooth: true
+            asynchronous: true
+        }
+
+        Kirigami.Icon {
+            anchors.fill: parent
+            source: iconContainer.isFilePath ? "" : iconContainer.iconValue
+            visible: !iconContainer.isFilePath
+        }
 
         MouseArea {
             id: mouseArea

@@ -8,11 +8,11 @@
   <group name="General">
     <entry name="iconA" type="String">
       <label>Icon A</label>
-      <default>semi-starred-symbolic</default>
+      <default>../icons/toggle-switch-on.svg</default>
     </entry>
     <entry name="iconB" type="String">
       <label>Icon B</label>
-      <default>semi-starred-symbolic-rtl</default>
+      <default>../icons/toggle-switch-off.svg</default>
     </entry>
     <entry name="checked" type="bool">
       <default>false</default>

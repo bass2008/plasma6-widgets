@@ -40,8 +40,8 @@ KCM.SimpleKCM {
     property alias cfg_nightStartTime: nightStartTime.text
 
     // HACK - this should be read from /package/contents/config/main.xml
-    readonly property string default_iconA: 'semi-starred-symbolic'
-    readonly property string default_iconB: 'semi-starred-symbolic-rtl'
+    readonly property string default_iconA: '../icons/toggle-switch-on.svg'
+    readonly property string default_iconB: '../icons/toggle-switch-off.svg'
 
     ColumnLayout {
         GridLayout {
