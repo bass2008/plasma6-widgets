@@ -81,6 +81,8 @@ PlasmoidItem {
     Item {
         id: iconContainer
         anchors.fill: parent
+        anchors.topMargin: 6
+        anchors.bottomMargin: 6
 
         readonly property string iconValue: plasmoid.configuration.checked ? plasmoid.configuration.iconA : plasmoid.configuration.iconB
         readonly property bool isFilePath: iconValue && (iconValue.startsWith("./") || iconValue.startsWith("../") || iconValue.startsWith("/") || iconValue.startsWith("file:"))
